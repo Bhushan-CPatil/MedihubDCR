@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:gravity="center"
-            android:text="KEEP IN TOUCH \nJIMSUN"
+            android:text="KEEP IN TOUCH \nMEDIHUB"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp"
             android:textStyle="bold" />

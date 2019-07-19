@@ -22,7 +22,7 @@ tools:context=".Fragment.Help">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="KEEP IN TOUCH (JIMSUN)"
+        android:text="KEEP IN TOUCH (MEDIHUB)"
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:textColor="@color/textcolorred"

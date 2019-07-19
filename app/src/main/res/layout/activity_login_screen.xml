@@ -148,6 +148,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:autoSizeTextType="uniform"
+                        android:spinnerMode="dialog"
                         android:autoSizeMinTextSize="1sp"
                         android:autoSizeMaxTextSize="14sp"
                         android:autoSizeStepGranularity="1sp"

@@ -93,6 +93,7 @@
         <android.support.v7.widget.AppCompatSpinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
             android:id="@+id/areaspinn"
             android:layout_marginTop="8dp" />
 
