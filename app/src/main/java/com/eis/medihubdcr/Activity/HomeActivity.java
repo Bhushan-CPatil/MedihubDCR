@@ -23,6 +23,7 @@ import com.eis.medihubdcr.Fragment.Help;
 import com.eis.medihubdcr.Fragment.MTPConfirmation;
 import com.eis.medihubdcr.Fragment.Options;
 import com.eis.medihubdcr.Fragment.UploadVisitingCard;
+import com.eis.medihubdcr.Fragment.VisitPlanDocLst;
 import com.eis.medihubdcr.Others.Global;
 import com.eis.medihubdcr.R;
 
@@ -67,6 +68,8 @@ public class HomeActivity extends AppCompatActivity
             displaySelectedScreen(R.id.nav_home);
         } else if (getIntent().getStringExtra("openfrag").equalsIgnoreCase("mtp")) {
             displaySelectedScreen(R.id.nav_mtp);
+        } else if (getIntent().getStringExtra("openfrag").equalsIgnoreCase("visitplansum")) {
+            displaySelectedScreen(R.id.nav_vps);
         }
     }
 
@@ -152,6 +155,9 @@ public class HomeActivity extends AppCompatActivity
                 /*} else {
                     new Global().notAllowed(HomeActivity.this);
                 }*/
+                break;
+            case R.id.nav_vps:
+                fragment = new VisitPlanDocLst();
                 break;
             case R.id.nav_help:
                 //new Global().notAllowed(HomeActivity.this);

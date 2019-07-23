@@ -29,6 +29,8 @@ import com.eis.medihubdcr.Pojo.QseraPopUpRes;
 import com.eis.medihubdcr.Pojo.RedicnePopUpRes;
 import com.eis.medihubdcr.Pojo.SampleAndGiftReceiptRes;
 import com.eis.medihubdcr.Pojo.VstCardDrLstRes;
+import com.eis.medihubdcr.Pojo.VstPlnDocLstRes;
+import com.eis.medihubdcr.Pojo.VstPlnSumRes;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -620,6 +622,27 @@ public interface Api {
             @Field("wdate") String wdate,
             @Field("objctv") String objctv,
             @Field("mngrjtwrk") String mngrjtwrk,
+            @Field("DBPrefix") String dbprefix
+    );
+
+
+    @FormUrlEncoded
+    @POST("getVisitPlanSummary.php")
+    Call<VstPlnSumRes> getVisitPlanSummary(
+            @Field("netid") String netid,
+            @Field("prevfinyr") String prevfinyr,
+            @Field("finyr") String finyr,
+            @Field("mtpdate") String mtpdate,
+            @Field("mode") String mode,
+            @Field("cntcd") String cntcd,
+            @Field("DBPrefix") String dbprefix
+    );
+
+    @FormUrlEncoded
+    @POST("getVisitPlanDocList.php")
+    Call<VstPlnDocLstRes> getVisitPlanDocList(
+            @Field("netid") String netid,
+            @Field("mtpdate") String mtpdate,
             @Field("DBPrefix") String dbprefix
     );
 }
