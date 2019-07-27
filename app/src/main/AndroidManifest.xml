@@ -21,8 +21,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.VisitPlanSummary"
-            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Activity.Quiz"></activity>
+        <activity
+            android:name=".Activity.VisitPlanSummary"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.CheckDCRSummary"
             android:screenOrientation="portrait" />

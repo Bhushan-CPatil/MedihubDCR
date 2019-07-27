@@ -14,6 +14,7 @@ import com.eis.medihubdcr.Pojo.DCRProdListRes;
 import com.eis.medihubdcr.Pojo.DefaultResponse;
 import com.eis.medihubdcr.Pojo.DoctorListAWRes;
 import com.eis.medihubdcr.Pojo.EditMtpFormResponse;
+import com.eis.medihubdcr.Pojo.EleaningMainRes;
 import com.eis.medihubdcr.Pojo.EpidermPopUpRes;
 import com.eis.medihubdcr.Pojo.FetchExpdtRes;
 import com.eis.medihubdcr.Pojo.GetDCRSummaryMainRes;
@@ -26,6 +27,7 @@ import com.eis.medihubdcr.Pojo.NewNonFliedWrkRes;
 import com.eis.medihubdcr.Pojo.NextMTPListRes;
 import com.eis.medihubdcr.Pojo.NonFieldWrkRes;
 import com.eis.medihubdcr.Pojo.QseraPopUpRes;
+import com.eis.medihubdcr.Pojo.QuizMainRes;
 import com.eis.medihubdcr.Pojo.RedicnePopUpRes;
 import com.eis.medihubdcr.Pojo.SampleAndGiftReceiptRes;
 import com.eis.medihubdcr.Pojo.VstCardDrLstRes;
@@ -643,6 +645,31 @@ public interface Api {
     Call<VstPlnDocLstRes> getVisitPlanDocList(
             @Field("netid") String netid,
             @Field("mtpdate") String mtpdate,
+            @Field("DBPrefix") String dbprefix
+    );
+    @FormUrlEncoded
+    @POST("elearning_first_api.php")
+    Call<EleaningMainRes> getElearningData(
+            @Field("ecode") String ecode,
+            @Field("DBPrefix") String dbprefix
+    );
+
+    @FormUrlEncoded
+    @POST("fetch_questions_list.php")
+    Call<QuizMainRes> getQuesData(
+            @Field("testid") String testid,
+            @Field("DBPrefix") String dbprefix
+    );
+
+    @FormUrlEncoded
+    @POST("saveTestResult.php")
+    Call<DefaultResponse> saveTestResult(
+            @Field("testid") String testid,
+            @Field("ecode") String ecode,
+            @Field("percentage") String percentage,
+            @Field("TotalCorrect") String TotalCorrect,
+            @Field("NoOfQuestions") String NoOfQuestions,
+            @Field("TimeTaken") String TimeTaken,
             @Field("DBPrefix") String dbprefix
     );
 }
